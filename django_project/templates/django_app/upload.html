@@ -2,7 +2,7 @@
 {% block content %}
 
 <div class="container" style="margin-top: 20px;">
-  <h5 style="text-align: center;">正面向きの全身の画像をアップロードしてください</h5>
+  <h5>画像（全身・正面向き）をアップロードしてください</h5>
   <form  method="POST" class="form" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}

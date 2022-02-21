@@ -1,5 +1,6 @@
 *.pyc
 *~
+model/personalized.pth
 __pycache__
 djangovenv
 db.sqlite3

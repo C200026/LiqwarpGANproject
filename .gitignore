@@ -1,1 +1,3 @@
 djangovenv/Lib/site-packages/torch/lib/
+
+model/personalized.pth
