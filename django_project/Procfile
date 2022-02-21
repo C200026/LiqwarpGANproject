@@ -1,0 +1,2 @@
+web: gunicorn django_project.wsgi
+worker: celery -A whisky worer -B -l info

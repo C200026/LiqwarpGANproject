@@ -1,0 +1,17 @@
+{% extends 'django_app/base.html' %}
+{% block content %}
+
+<div class="text-center">
+  <img src="{{ img_url}}" class="img-thumbnail" alt="your pic">
+</div>
+<div class="row" style="margin-top: 20px;">
+  <div class="col s8" style="text-align: center;">
+    <!-- 戻るボタン -->
+    <a href="/upload"><button class="btn btn-link" type="button" name="upload" >戻る</button></a>
+    <!-- 推論開始ボタン -->
+    <a href="/result"><button class="btn btn-info" type="button" name="liqwarpgan">Let's Dance! <i class="fa-solid fa-child"></i></button></a>
+    <!-- 画像リスト一覧遷移ボタン -->
+    <a href="/list"><button class="btn btn-link" type="button" name="list">画像リスト</button></a>
+  </div>
+</div>
+{% endblock %}

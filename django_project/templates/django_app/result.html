@@ -1,0 +1,21 @@
+{% extends 'django_app/base.html' %}
+
+{% block title %}Generated Your Movie!{% endblock %}
+
+{% block content %}
+<div class="container" style="margin-top: 20px;">
+  <div class="text-center">
+  <h2 style="font-size:30px;">Here is your movie, Enjoy!!</h2>
+  <p>MOVIE</p>
+  </div>
+  <div class="row" style="margin-top: 20px;">
+    <div class="col s8" style="text-align: center;">
+    <!-- Downloadボタン -->
+    <a href="" download><button class="btn btn-info" type="button" name="download">Download</button></a>
+    <!-- 戻るボタン -->
+    <a href="/index"><button class="btn btn-link" type="button" name="index">戻る</button></a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

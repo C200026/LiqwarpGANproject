@@ -1,0 +1,25 @@
+{% extends 'django_app/base.html' %}
+{% block title %}画像一覧{% endblock %}
+{% block content %}
+
+<div class="container" style="margin-top: 20px;">
+    <h5 style="text-align: center;">画像を選んでください</h5>    
+    <div class="container" style="margin: 10px;">
+        {% for img in imgs %}            
+            <img src="'../media/documents/{}'.format({{img.image}})" class="img-thumbnail" alt="pic">
+            <br><input type="radio" name="image" value="{{img.image}}">{{img.image}}<br>
+        {% endfor %}
+    </div>
+
+    <div class="row" style="margin-top: 20px;">
+    <div class="col s8" style="text-align: center;">
+        <!-- 戻るボタン -->
+        <a href="/index"><button class="btn btn-link" type="button" name="index">戻る</button></a>
+        <!-- 推論開始ボタン -->
+        <a href="/result"><button class="btn btn-info" type="button" name="gan">Let's Dance! <i class="fa-solid fa-person-running"></i></button></a>
+        <!-- 新規登録ページ遷移ボタン -->
+        <a href="/upload"><button class="btn btn-link" type="button" name="upload" >新規画像追加</button></a>
+    </div>
+    </div>
+</div>
+{% endblock %}

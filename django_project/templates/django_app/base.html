@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>{% block title %}LiquidWarpGAN{% endblock %}</title>
+    <script src="https://kit.fontawesome.com/c915025c8d.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-light" style="background-color: #00b9f1;">
+      <span class="navbar-brand mb-0 h1" style="color:white; font-weight: bold;">LiquidWarpGANをアプリで実装</span>
+
+      <!-- ログインすると名前表示機能の追加 -->
+      {% if user.is_authenticated %}
+      <span style="font-size:15px; text-align: right;">
+      <a style="color:white;">
+        こんにちは、{{ user.username}}さん <i class="fa-regular fa-face-smile"></i>　
+      <!-- ログアウトボタンでログアウトのURLに移動するように処理 -->        
+        <a href="{% url 'logout' %}"><button type="submit" value="logout" class="btn btn-primary">Log Out   <i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+        </a>
+      </a>
+      </span>
+      {% endif %}
+
+    </nav>
+
+    <div class="contents" style="margin:0 20px">
+      {% block content %}
+
+      {% endblock %}
+    </div>
+  </body>
+</html>

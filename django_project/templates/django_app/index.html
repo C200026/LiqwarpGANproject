@@ -1,0 +1,32 @@
+{% extends 'django_app/base.html' %}
+
+{% block content %}
+
+<div class="container" style="margin-top: 20px;">
+  <h5 style="text-align: center;">画像を新規登録するか、画像一覧を確認するか選んでください</h5>
+  
+  <div class="row" style="margin-top: 20px;">
+    <div class="col s8" style="text-align: center;">
+        <!-- 新規登録ページ遷移ボタン -->
+        <a href="/upload"><button class="btn btn-primary" type="button" name="upload" >新規画像追加</button></a>
+        <!-- 画像リスト一覧遷移ボタン -->
+        <a href="/list"><button class="btn btn-primary" type="button" name="list">画像リスト</button></a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+<!--
+<!DOCTYPE html>
+<html lang="ja"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiqWarpGAN</title>　　
+</head>
+<body>
+    <p>Hello Django!</p>
+</body>
+</html>
+-->
